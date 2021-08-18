@@ -1,10 +1,8 @@
 
-## OpenELIS-Global-2 Automated Testing Framework.
-This is the new  OpenELIS-Global2 Automated testing Framework thats integrates both BDD with Cucumber and Fuctional Testing with Selenium using the Page Object Model design for high Maintainability ,Readability and Re-usability
+## Isanteplus Automated Testing Framework.
+This is the Isanteplus Automated testing Framework thats integrates both BDD with Cucumber and Fuctional Testing with Selenium using the Page Object Model design for high Maintainability ,Readability and Re-usability
 
-[![Build Status](https://github.com/I-TECH-UW/openelis-qaframework/actions/workflows/qa.yml/badge.svg)](https://github.com/I-TECH-UW/openelis-qaframework/actions/workflows/qa.yml)
 
-See [Wiki](https://github.com/I-TECH-UW/openelis-qaframework/wiki) for the Project SetUp
 
 ## Installing dependencies wthout running tests
 
@@ -36,10 +34,5 @@ See [Wiki](https://github.com/I-TECH-UW/openelis-qaframework/wiki) for the Proje
 | Test Feature      |Filter Tag     |
 |:-----------------:|:-------------:|
 | Login             | @login        | 
-| Add order         | @order        |  
-| Results Entry     | @results      | 
-| Validation        | @validate     |
-| Patient Report    | @report       |
-| Patient Entry     | @patientEntry |
-| EMR-LIS Work Flow | @emrLis       |  
+
        
