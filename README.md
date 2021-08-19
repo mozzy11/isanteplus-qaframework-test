@@ -3,16 +3,14 @@
 This is the Isanteplus Automated testing Framework thats integrates both BDD with Cucumber and Fuctional Testing with Selenium using the Page Object Model design for high Maintainability ,Readability and Re-usability
 
 
-
 ## Installing dependencies wthout running tests
-
 
     mvn clean install -Dcucumber.filter.tags='@null'
 
 ## Configuration
 - Set Your test configurations in [src/test/resources/test.properties](./src/test/resources/test.properties)
 
-- See Feature files under [src/features/openelis](./src/features/openelis)
+- See Feature files under [src/features/isanteplus](./src/features/isanteplus)
 
 ### Running tests
 

@@ -14,15 +14,15 @@ public class TestProperties {
 	
 	public static final String LOGIN_PASSWORD_PROPERTY = "login.password";
 	
-	public static final String DEFAULT_PASSWORD = "test";
+	public static final String DEFAULT_PASSWORD = "admin";
 	
 	public static final String LOGIN_USERNAME_PROPERTY = "login.username";
 	
-	public static final String DEFAULT_LOGIN_USERNAME = "itech";
+	public static final String DEFAULT_LOGIN_USERNAME = "Admin123";
 	
 	public static final String WEBAPP_URL_PROPERTY = "webapp.url";
 	
-	public static final String DEFAULT_WEBAPP_URL = "http://localhost:8443/OpenELIS-Global";
+	public static final String DEFAULT_WEBAPP_URL = "http://isanteplusdemo.com:8080/openmrs";
 	
 	public static final String HEADLESS_PROPERTY = "headless";
 	

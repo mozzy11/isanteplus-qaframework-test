@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
  */
 public class HomePage extends Page {
 	
-	
+	private final By LINK_LOGOUT = By.className("logout");
 	
 	public HomePage(Page page) {
 		super(page);
@@ -19,8 +19,8 @@ public class HomePage extends Page {
 		return "PATH_HOME";
 	}
 
-	public WebElement getLogOutLink() {
-		return findElement(By.id("logout-form"));
+	public Boolean hasLogOutLink() {
+		return hasElement(LINK_LOGOUT);
 	}
 
 }

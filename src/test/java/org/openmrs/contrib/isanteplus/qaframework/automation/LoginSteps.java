@@ -1,6 +1,6 @@
 package org.openmrs.contrib.isanteplus.qaframework.automation;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.openmrs.contrib.isanteplus.qaframework.RunTest;
 import org.openmrs.contrib.isanteplus.qaframework.automation.page.HomePage;
@@ -44,19 +44,26 @@ public class LoginSteps extends TestBase {
 	public void anyPassword(String password) {
 		loginPage.enterPassword(password);
 	}
+
+	@And("User Selects {string} Login Location")
+	public void selectLoginLocation(String loginLocation) {
+		if ("University Peace Hospital".equals(loginLocation)) {
+			loginPage.selectLocation();
+		}
+	}
 	
 	@And("User Logs in")
 	public void userLogsIn() {
-		loginPage.getLoginButton().click();
+		loginPage.clickLoginButton();;
 	}
 	
 	@Then("System Evaluates Login {string}")
 	public void evaluateLogin(String status) {
 		 homePage = new HomePage(loginPage);
 		if (status.trim().endsWith("true")) {
-			assertNotNull(homePage.getLogOutLink());
+			assertTrue(homePage.hasLogOutLink());
 		} else if (status.trim().endsWith("false")) {
-			assertNotNull(loginPage.getLoginButton());
+			assertTrue(loginPage.hasLoginButton());
 		}
 	}
 }
