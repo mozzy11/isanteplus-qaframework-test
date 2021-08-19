@@ -47,7 +47,7 @@ public class LoginSteps extends TestBase {
 
 	@And("User Selects {string} Login Location")
 	public void selectLoginLocation(String loginLocation) {
-		if ("University Peace Hospital".equals(loginLocation)) {
+		if ("setUPLocation".equals(loginLocation)) {
 			loginPage.selectLocation();
 		}
 	}
