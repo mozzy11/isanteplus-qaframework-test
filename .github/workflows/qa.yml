@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: IsantePlus/docker-isanteplus-server
-          ref: ci
+          ref: ci-test
       - name:  Spin UP isanteplus server 
         run:  |
               docker-compose -f docker-compose.ci.yaml up -d
