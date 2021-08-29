@@ -9,15 +9,26 @@ jobs:
   build:
     runs-on: ubuntu-latest         
     steps:
+      - name: Checkout docker isanteplus server
+        uses: actions/checkout@v2
+        with:
+          repository: IsantePlus/docker-isanteplus-server
+          ref: ci
+      - name:  Spin UP isanteplus server 
+        run:  |
+              docker-compose -f docker-compose.ci.yaml up -d
+      - name: Sleep for 4 minutes 
+        run: sleep 4m
+        shell: bash     
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Checkout openelis qaframework
+      - name: Checkout isanteplus qaframework
         uses: actions/checkout@v2
         with:
           repository: ${{github.repository}}
-      - name: Run and Publish Openelis QA
+      - name: Run isanteplus QA and Publish Test results
         run: |
           echo "cucumber.publish.enabled=true" > src/test/resources/cucumber.properties
           mvn clean install -Dcucumber.filter.tags='@null' 
