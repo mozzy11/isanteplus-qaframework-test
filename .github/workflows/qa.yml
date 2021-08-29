@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}    
       - name:  Spin UP isanteplus server 
         run:  |
-              docker-compose -f docker-compose.ci.yaml up -d
+              docker-compose -f docker-compose.ci.yaml up 
       - name: Sleep for 6 minutes 
         run: sleep 6m
         shell: bash     
