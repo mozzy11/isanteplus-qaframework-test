@@ -30,6 +30,8 @@ jobs:
         run: docker ps  
       - name: Check code
         run: curl -s -o /dev/null -w ''%{http_code}'' http://localhost:8080/openmrs/login.htm 
+      - name: Check Logs
+        run: docker-compose -f docker-compose.ci.yaml logs -f
       - name: wait for openmrs instance to start
         run: while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost:8080/openmrs/login.htm)" != "200" ]]; do sleep 1; done
       - name: Set up JDK 1.8
