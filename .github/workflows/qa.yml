@@ -26,6 +26,8 @@ jobs:
       - name: Sleep for 6 minutes 
         run: sleep 6m
         shell: bash 
+      - name: Check containers
+        run: docker ps  
       - name: wait for openmrs instance to start
         run: while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost:8080/openmrs/login.htm)" != "200" ]]; do sleep 1; done
       - name: Set up JDK 1.8
