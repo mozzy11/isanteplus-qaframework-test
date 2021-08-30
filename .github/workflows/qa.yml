@@ -41,7 +41,8 @@ jobs:
       - name: Run isanteplus QA and Publish Test results
         run: |
           echo "cucumber.publish.enabled=true" > src/test/resources/cucumber.properties
-          mvn clean install -Dcucumber.filter.tags='@null' 
+          mvn clean install -DskipTests=true
+          cp -f src/test/resources/org/openmrs/uitestframework/test-local.properties src/test/resources/org/openmrs/uitestframework/test.properties
           mvn test   
           curl -X POST \
           https://studio.cucumber.io/cucumber_project/results \
